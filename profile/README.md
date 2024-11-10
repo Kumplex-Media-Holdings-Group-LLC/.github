@@ -1,5 +1,5 @@
 ## Hi there 👋
-🙋‍♀️ A short introduction - what is your organization all about? Creating affordable apps
+🙋‍♀️ A short introduction - what is your organization all about? Creating affordable apps update
 <!--
 
 **Here are some ideas to get you started:**
