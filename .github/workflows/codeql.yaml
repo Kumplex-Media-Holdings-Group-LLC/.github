@@ -57,11 +57,18 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ "matrix.language" }}
-        build-mode: ${{ "matrix.build-mode" }}
-        # If you wish to specify custom queries, you can do so here or in a config file.
+      uses: advanced-security/set-codeql-language-matrix@v1.2.1
+  with:
+    # github token
+    access-token: 
+    # languages API endpoint
+    endpoint: 
+    # Use a comma separated list here to exclude specific languges from your CodeQL scan.  Example: "python, java"
+    exclude: # optional
+  # You may pin to the exact commit or the version.
+  # uses: advanced-security/set-codeql-language-matrix@245a56dc4c677e128c650a2098f12036906a2997
+  
+          
         # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
 
