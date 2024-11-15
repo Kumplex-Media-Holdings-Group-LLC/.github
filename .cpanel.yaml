@@ -1,0 +1,6 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/derricka/kmhgllc-kme
+    - echo "Starting deployment to $DEPLOYPATH"
+    - /bin/cp -R . $DEPLOYPATH
+    - echo "Deployment completed"
