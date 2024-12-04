@@ -1,6 +1,32 @@
+# Deployment Configuration for cPanel
+
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/derricka/kmhgllc-kme
+    # Load environment variables
+    - source .env
+
+    # Display the deployment path
     - echo "Starting deployment to $DEPLOYPATH"
-    - /bin/cp -R . $DEPLOYPATH
-    - echo "Deployment completed"
+
+    # Create backup directory if it doesn't exist
+    - if [ ! -d "$BACKUPDIR" ]; then mkdir -p $BACKUPDIR; fi
+    - echo "Backup directory verified: $BACKUPDIR"
+
+    # Backup current deployment
+    - rsync -av --delete $DEPLOYPATH/ $BACKUPDIR/
+    - echo "Backup completed: $BACKUPDIR"
+
+    # Deploy updated files to the target path
+    - rsync -av --exclude-from='.gitignore' ./ $DEPLOYPATH/
+    - echo "Deployment files synced to $DEPLOYPATH"
+
+    # Set correct permissions for the deployment path
+    - chmod -R 755 $DEPLOYPATH
+    - echo "Permissions set for deployment path"
+
+    # Log the deployment process
+    - echo "$(date '+%Y-%m-%d %H:%M:%S') Deployment to $DEPLOYPATH completed successfully." >> $LOGFILE
+
+    # Optional: Restart application or services if needed
+    - if [ -f "$DEPLOYPATH/restart.sh" ]; then bash $DEPLOYPATH/restart.sh; fi
+    - echo "Deployment completed!"completed successfully"
