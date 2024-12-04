@@ -1,3 +1,5 @@
+# Tailwind CSS and JavaScript
+
 Here’s a file structure for our GitHub repository, 
 this project is a static website using Tailwind CSS 
 and JavaScript. 
@@ -5,7 +7,7 @@ and JavaScript.
 This structure will allow for clean organization and 
 scalability as our project grows.
 
-Suggested File Structure
+## Suggested File Structure
 
 /kmhgllc-site/                     # Root directory of your project
 │
@@ -37,7 +39,7 @@ Suggested File Structure
 ├── postcss.config.js              # PostCSS config (for building Tailwind CSS)
 └── tailwind.config.js             # Tailwind CSS configuration file
 
-Breakdown of Directories and Files:
+## Breakdown of Directories and Files:
 
 1. /kmhgllc-site/:
 This is the root directory of 
@@ -94,38 +96,39 @@ breakpoints, and themes.
 
 ---
 
-Sample .gitignore file
+## Sample .gitignore file
 
 Here’s a simple .gitignore file to avoid committing unnecessary files:
 
-# Node.js dependencies
+### Node.js dependencies
 node_modules/
 
-# Build output
+### Build output
 /dist/
 
-# Tailwind CSS output
+### Tailwind CSS output
 *.css
 
-# OS generated files
+### OS generated files
 .DS_Store
 Thumbs.db
 
-# Logs
+### Logs
 npm-debug.log
 yarn-debug.log
 yarn-error.log
 
-# Optional: If using an IDE like VSCode, add this
+### Optional: If using an IDE like VSCode, add this
 .vscode/
 
 
 ---
 
-Sample package.json
+## Sample package.json
 
 If you are using npm and want to automate builds with Tailwind and PostCSS, 
-here's a sample package.json:
+
+## here's a sample package.json:
 
 {
   "name": "kmhgllc-site",
@@ -146,7 +149,7 @@ here's a sample package.json:
   "license": "MIT"
 }
 
-Running Your Project Locally:
+## Running Your Project Locally:
 
 1. Install the necessary dependencies with npm:
 
@@ -164,7 +167,10 @@ npm start
 
 
 
-This structure helps you manage your files efficiently and maintain scalability as your project grows. It also gives you flexibility to work with static assets, organize components, and create optimized builds for deployment.
-Let the Kumplex Media Holdings Group LLC team know if you have any questions.
+This structure helps us manage our files efficiently and maintain scalability as our project grows. 
+
+It also gives you flexibility to work with static assets, organize components, and create optimized builds for deployment.
+
+Let the Kumplex Media Holdings Group LLC team know if you have any questions, concerns or suggestions.
 
 
